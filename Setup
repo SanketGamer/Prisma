@@ -1,0 +1,15 @@
+
+What is Prisma?
+Prisma is an ORM (Object Relational Mapper)
+Connects your code → database
+Lets you query DB using code (not raw SQL)
+Generates type-safe queries
+
+step to use prisma --
+1) npm install prisma @prisma/client
+2) npx prisma init
+3) Add DATABASE_URL in .env
+4) Define schema
+5) npx prisma generate
+6) npx prisma migrate dev --name init
+
