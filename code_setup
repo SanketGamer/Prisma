@@ -1,0 +1,39 @@
+inside package --
+create a prisma folder
+
+inside do -- prisma init
+
+in tsconfig.json --
+{
+  "extends":"@repo/typescript-config/base.json"
+}
+
+in pacakge.json --
+{
+  "name": "@repo/db",  //change name to this for exporting like @repo/db/something
+  "version": "1.0.0",
+  "main": "index.js",
+  "exports": {
+    "./client": "./src/index.ts"   //add this
+  },
+  "keywords": [],
+  "author": "",
+  "devDependencies": {
+    "@repo/typescript-config": "workspace:*",   //add this
+    "@types/node": "^22.19.17"
+  },
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@prisma/client": "^6.3.0",
+    "dotenv": "^17.4.2",
+    "prisma": "^6.3.0"
+  }
+}
+
+create a src folder inside index.ts -- 
+  import { PrismaClient } from "@prisma/client";
+   import "dotenv/config";
+  export const client = new PrismaClient();
+
+
