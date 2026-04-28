@@ -13,3 +13,9 @@ step to use prisma --
 5) npx prisma generate
 6) npx prisma migrate dev --name init
 
+
+
+easy way -- 
+1)npx prisma init
+2)npx prisma migrate dev
+3) npx prisma generate
